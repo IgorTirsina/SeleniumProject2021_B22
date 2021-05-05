@@ -36,6 +36,14 @@ public class BasicNavigations {
         //refreshing the page using navigations
         driver.navigate().refresh();
 
+        //putting 3 seconds of wait/ stops the code for 3 sec
+        Thread.sleep(3000);
+
+        //going to another url using .to() method
+        driver.navigate().to("https://www.google.com");
+
+
+
 
     }
 
