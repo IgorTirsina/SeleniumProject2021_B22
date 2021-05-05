@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BasicNavigations {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         //1- setup the browser driver
         WebDriverManager.chromedriver().setup();
@@ -18,8 +18,14 @@ public class BasicNavigations {
         //3- get the page for Tesla.com
         driver.get("https://www.tesla.com");
 
+        //putting 3 seconds of wait/ stops the code for 3 sec
+        Thread.sleep(3000);
+
         //Going back using navigations
         driver.navigate().back();
+
+        //Going forward using navigations
+        driver.navigate().forward();
 
 
     }
