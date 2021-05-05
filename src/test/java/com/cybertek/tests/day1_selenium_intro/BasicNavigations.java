@@ -24,8 +24,17 @@ public class BasicNavigations {
         //Going back using navigations
         driver.navigate().back();
 
+        //putting 3 seconds of wait/ stops the code for 3 sec
+        Thread.sleep(3000);
+
         //Going forward using navigations
         driver.navigate().forward();
+
+        //putting 3 seconds of wait/ stops the code for 3 sec
+        Thread.sleep(3000);
+
+        //refreshing the page using navigations
+        driver.navigate().refresh();
 
 
     }
