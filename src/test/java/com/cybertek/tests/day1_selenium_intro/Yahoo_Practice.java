@@ -28,7 +28,12 @@ public class Yahoo_Practice {
         //actual title
         String actualTitle = driver.getTitle();
 
-
+        //creating our verification
+        if (actualTitle.equals(expectedTitle)){
+            System.out.println("Title is as expected. Verification PASSED!");
+        }else{
+            System.out.println("Title is not as expected. Verification FAILED!!!");
+        }
 
     }
 }
