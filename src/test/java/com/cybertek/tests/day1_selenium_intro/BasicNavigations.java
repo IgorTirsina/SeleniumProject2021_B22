@@ -42,6 +42,8 @@ public class BasicNavigations {
         //going to another url using .to() method
         driver.navigate().to("https://www.google.com");
 
+        System.out.println("Current title: "+driver.getTitle());
+
 
 
 
