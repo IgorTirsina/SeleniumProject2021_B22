@@ -15,6 +15,9 @@ public class Yahoo_Practice {
         //1. Open Chrome browser
         WebDriver driver = new ChromeDriver();
 
+        //maximize browser
+        driver.manage().window().maximize();
+
         //2. Go to https://www.yahoo.com
         driver.get("https://www.yahoo.com");
 
