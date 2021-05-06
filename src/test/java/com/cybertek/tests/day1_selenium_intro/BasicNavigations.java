@@ -20,6 +20,10 @@ public class BasicNavigations {
 
         System.out.println("Current title: " + driver.getTitle());
 
+        String currentUrl = driver.getCurrentUrl();
+
+        System.out.println("currentUrl = " + currentUrl);
+
         //putting 3 seconds of wait/ stops the code for 3 sec
         Thread.sleep(3000);
 
