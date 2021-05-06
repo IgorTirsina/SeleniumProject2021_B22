@@ -15,6 +15,9 @@ public class BasicNavigations {
         // this line opens a browser
         WebDriver driver = new ChromeDriver();
 
+        //this line will basically maximize the browser size
+        driver.manage().window().maximize();
+
         //3- get the page for Tesla.com
         driver.get("https://www.tesla.com");
 
@@ -55,8 +58,7 @@ public class BasicNavigations {
         System.out.println("currentUrl = " + currentUrl);
 
 
-        //this line will basically maximize the browser size
-        driver.manage().window().maximize();
+
 
 
     }
