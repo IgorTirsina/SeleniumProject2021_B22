@@ -18,6 +18,8 @@ public class BasicNavigations {
         //3- get the page for Tesla.com
         driver.get("https://www.tesla.com");
 
+        System.out.println("Current title: " + driver.getTitle());
+
         //putting 3 seconds of wait/ stops the code for 3 sec
         Thread.sleep(3000);
 
@@ -43,6 +45,7 @@ public class BasicNavigations {
         driver.navigate().to("https://www.google.com");
 
         System.out.println("Current title: "+driver.getTitle());
+
 
 
 
