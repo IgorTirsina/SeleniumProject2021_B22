@@ -10,6 +10,7 @@ public class SeleniumTest {
 
         //1- Setting up the browser driver
         WebDriverManager.chromedriver().setup();
+        //System.setProperty("chrome","path of where you saved the driver");
 
         //2- Create instance of chrome driver and open browser
         //This is the line that is opening the browser.
