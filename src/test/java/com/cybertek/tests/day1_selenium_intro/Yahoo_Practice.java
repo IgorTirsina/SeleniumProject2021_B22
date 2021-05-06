@@ -23,6 +23,9 @@ public class Yahoo_Practice {
 
         //3. Verify title:
         //Expected: Yahoo
+        String expectedTitle = "Yahoo";
+
+
 
 
     }
