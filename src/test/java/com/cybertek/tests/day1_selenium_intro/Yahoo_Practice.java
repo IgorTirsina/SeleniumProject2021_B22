@@ -35,5 +35,8 @@ public class Yahoo_Practice {
             System.out.println("Title is not as expected. Verification FAILED!!!");
         }
 
+        //closing the browser
+        driver.close();
+
     }
 }
