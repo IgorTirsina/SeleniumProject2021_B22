@@ -18,6 +18,9 @@ public class BasicNavigations {
         //this line will basically maximize the browser size
         driver.manage().window().maximize();
 
+        //will work for mac only, will not work in windows.
+        //driver.manage().window().fullscreen();
+
         //3- get the page for Tesla.com
         driver.get("https://www.tesla.com");
 
@@ -57,7 +60,11 @@ public class BasicNavigations {
 
         System.out.println("currentUrl = " + currentUrl);
 
+        //this method will close the currently opened browser
+        //it will only close 1 browser or 1 tab
+        driver.close();
 
+        //driver.quit();
 
 
 
