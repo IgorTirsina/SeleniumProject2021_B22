@@ -25,6 +25,8 @@ public class Yahoo_Practice {
         //Expected: Yahoo
         String expectedTitle = "Yahoo";
 
+        //actual title
+        String actualTitle = driver.getTitle();
 
 
 
