@@ -16,8 +16,14 @@ public class T1_ZeroBankHeaderTextVerification {
 
         //2. Go to http://zero.webappsecurity.com/login.html
         driver.get("http://zero.webappsecurity.com/login.html");
+
         //3. Verify header text
         //Expected: “Log in to ZeroBank”
+        // 1- locate the web element
+        // 2- get the text of it using getText() method
+
+        String expectedHeader = "Log in to ZeroBank";
+
 
     }
 
