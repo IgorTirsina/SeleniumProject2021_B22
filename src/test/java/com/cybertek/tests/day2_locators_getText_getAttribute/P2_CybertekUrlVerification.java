@@ -36,6 +36,9 @@ public class P2_CybertekUrlVerification {
 
         //4. Verify title:
         //Expected: Practice
+        String expectedTitle = "Practice";
+        String actualTitle = driver.getTitle();
+
 
     }
 
