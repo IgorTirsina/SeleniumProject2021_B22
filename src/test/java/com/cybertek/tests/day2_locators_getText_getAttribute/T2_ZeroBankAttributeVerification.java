@@ -1,7 +1,9 @@
 package com.cybertek.tests.day2_locators_getText_getAttribute;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class T2_ZeroBankAttributeVerification {
@@ -16,8 +18,23 @@ public class T2_ZeroBankAttributeVerification {
 
         //2. Go to http://zero.webappsecurity.com/login.html
         driver.get("http://zero.webappsecurity.com/login.html");
+
+        //LOCATE THE LINK AND STORE INSIDE OF WebElement
+
+        WebElement zeroBankLink = driver.findElement(By.className("brand"));
+
         //3. Verify link text from top left:
         //Expected: “Zero Bank”
+        String expectedLinkText = "Zero Bank";
+        String actualLinkText = zeroBankLink.getText();
+        //driver.findElement(By.className("brand")).getText();
+
+        if (actualLinkText.equals(expectedLinkText)){
+            System.out.println("Link text verification PASSED!");
+        }else{
+            System.out.println("Link text verification PASSED!");
+        }
+
         //4. Verify link href attribute value contains:
         //Expected: “index.html”
 
