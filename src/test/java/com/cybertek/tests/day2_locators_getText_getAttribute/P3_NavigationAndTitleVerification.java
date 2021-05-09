@@ -25,7 +25,7 @@ public class P3_NavigationAndTitleVerification {
         //4- Verify title contains:
         //Expected: Gmail
         String expectedInTitle = "Gmail";
-        String actualTitle = driver.getTitle();
+        String actualTitle = driver.getTitle(); //Gmail - Email from Google
 
         if (actualTitle.contains(expectedInTitle)){
             System.out.println("Title verification PASSED!");
