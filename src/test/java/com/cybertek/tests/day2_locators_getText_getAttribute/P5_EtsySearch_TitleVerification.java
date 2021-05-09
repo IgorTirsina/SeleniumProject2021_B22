@@ -20,6 +20,9 @@ public class P5_EtsySearch_TitleVerification {
         driver.get("https://www.etsy.com");
 
         // 3. Search for “wooden spoon”
+        //1srt we need to locate the search bar
+        //2nd - We enter search value
+        //3rd - We press ENTER
         driver.findElement(By.id("global-enhancements-search-query"))
                 .sendKeys("wooden spoon" + Keys.ENTER);
 
@@ -32,7 +35,6 @@ public class P5_EtsySearch_TitleVerification {
             System.out.println("Etsy title verification PASSED!");
         }else{
             System.out.println("Etsy title verification FAILED!!!");
-
         }
 
 
