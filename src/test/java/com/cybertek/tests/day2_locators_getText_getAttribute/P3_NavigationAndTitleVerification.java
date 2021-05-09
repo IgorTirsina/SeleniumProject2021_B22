@@ -24,7 +24,20 @@ public class P3_NavigationAndTitleVerification {
 
         //4- Verify title contains:
         //Expected: Gmail
+        String expectedInTitle = "Gmail";
+        String actualTitle = driver.getTitle();
 
+        if (actualTitle.contains(expectedInTitle)){
+            System.out.println("Title verification PASSED!");
+        }else {
+            System.out.println("Title verification FAILED!!!");
+        }
+
+        // COMMAND + D : multiplies the current line
+        // control + D : multiplies the current line
+
+        // MAC : moving the line up and down: command + shift + up /down arrow
+        // WINDOWS: moving the line up and down: control + shift + up /down arrow
 
         //5- Go back to Google by using the .back();
         //6- Verify title equals:
