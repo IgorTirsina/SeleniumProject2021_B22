@@ -16,11 +16,24 @@ public class P2_CybertekUrlVerification {
         //1. Open Chrome browser
         WebDriver driver = new ChromeDriver();
 
+        //maximize the page
+        driver.manage().window().maximize();
+
         //2. Go to https://practice.cybertekschool.com
         driver.get("http://practice.cybertekschool.com/");
 
-        //3. VerifyURLcontains
+        //3. Verify URL contains
         //Expected: cybertekschool
+
+        String expectedInUrl = "cybertekschool";
+        String actualUrl = driver.getCurrentUrl();
+
+        if (actualUrl.contains(expectedInUrl)){
+            System.out.println("URL verification PASSED!");
+        }else{
+            System.out.println("URL verification FAILED!");
+        }
+
         //4. Verify title:
         //Expected: Practice
 
