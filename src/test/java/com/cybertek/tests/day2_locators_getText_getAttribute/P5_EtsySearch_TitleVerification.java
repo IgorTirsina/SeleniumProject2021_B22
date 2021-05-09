@@ -25,6 +25,15 @@ public class P5_EtsySearch_TitleVerification {
 
         // 4. Verify title:
         //Expected: “Wooden spoon | Etsy”
+        String expectedTitle = "Wooden spoon | Etsy";
+        String actualTitle = driver.getTitle();
+
+        if (actualTitle.equals(expectedTitle)){
+            System.out.println("Etsy title verification PASSED!");
+        }else{
+            System.out.println("Etsy title verification FAILED!!!");
+
+        }
 
 
     }
