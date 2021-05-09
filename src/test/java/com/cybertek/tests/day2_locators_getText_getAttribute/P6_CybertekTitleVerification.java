@@ -35,7 +35,6 @@ public class P6_CybertekTitleVerification {
             System.out.println("Title verification PASSED!");
         }else{
             System.out.println("Title verification FAILED!!!");
-
         }
 
 
