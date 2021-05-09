@@ -37,6 +37,5 @@ public class P5_EtsySearch_TitleVerification {
             System.out.println("Etsy title verification FAILED!!!");
         }
 
-
     }
 }
