@@ -1,6 +1,7 @@
 package com.cybertek.tests.day2_locators_getText_getAttribute;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -15,7 +16,14 @@ public class P6_CybertekTitleVerification {
         driver.manage().window().maximize();
 
         //2. Go to http://practice.cybertekschool.com/inputs
-        //3. Click“Home”button
+        driver.get("http://practice.cybertekschool.com/inputs");
+
+        //3. Click “Home” button
+        //1st - locate the web element using class attribute value
+        //2nd - click
+
+        driver.findElement(By.className("nav-link")).click();
+
         //4. Verify title as expected:
         //Expected: Practice
 
