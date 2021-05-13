@@ -24,9 +24,15 @@ public class F4_AttributeValueVerification {
 
         //Expected: “registration_form"
         String expectedInHref = "registration_form";
+        String actualHrefValue = createPageLink.getAttribute("href");
 
+        System.out.println("actualHrefValue = " + actualHrefValue);
 
-
+        if (actualHrefValue.contains(expectedInHref)){
+            System.out.println("HREF value verification PASSED!");
+        }else{
+            System.out.println("HREF value verification FAILED!!!");
+        }
 
     }
 }
