@@ -29,6 +29,11 @@ public class F3_HeaderVerification {
         String expectedHeader = "Connect with friends and the world around you on Facebook.";
         String actualHeader = header.getText();
 
+        if (actualHeader.equals(expectedHeader)){
+            System.out.println("Header verification passed!");
+        }else{
+            System.out.println("Header verification FAILED!");
+        }
 
     }
 
