@@ -28,6 +28,7 @@ public class F3_HeaderVerification {
         //Expected: “Connect with friends and the world around you on Facebook.”
         String expectedHeader = "Connect with friends and the world around you on Facebook.";
         String actualHeader = header.getText();
+        //---> create webelement<--- ->getting the text<-
 
         if (actualHeader.equals(expectedHeader)){
             System.out.println("Header verification passed!");
