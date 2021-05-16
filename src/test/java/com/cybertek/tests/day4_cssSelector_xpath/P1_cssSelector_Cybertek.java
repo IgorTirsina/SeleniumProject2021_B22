@@ -29,6 +29,8 @@ public class P1_cssSelector_Cybertek {
         WebElement emailLabel = driver.findElement(By.cssSelector("label[for='email']"));
 
         //d. E-mail input box
+        WebElement inputEmail = driver.findElement(By.cssSelector("input[name='email']"));
+
         //e. “Retrieve password” button
         //f. “Powered by Cybertek School” text
         //4. Verify all WebElements are displayed.
