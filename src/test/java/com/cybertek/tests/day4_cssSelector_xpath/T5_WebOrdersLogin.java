@@ -11,7 +11,7 @@ public class T5_WebOrdersLogin {
 
         //TC #5: Basic login authentication
         // 1- Open a chrome browser
-        //WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriverA().setup();
         //WebDriver driver = new ChromeDriver();
 
         WebDriver driver = WebDriverFactory.getDriver("chrome");
