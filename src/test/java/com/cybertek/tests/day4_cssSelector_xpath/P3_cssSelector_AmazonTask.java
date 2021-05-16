@@ -28,6 +28,8 @@ public class P3_cssSelector_AmazonTask {
         //Expected: Amazon.com : wooden spoon
 
         String expectedTitle = "Amazon.com : wooden spoon";
+
+        //Thread.sleep(2000);
         String actualTitle = driver.getTitle();
 
         if (actualTitle.equals(expectedTitle)){
