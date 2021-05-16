@@ -26,6 +26,8 @@ public class P1_cssSelector_Cybertek {
         WebElement forgotPasswordHeader = driver.findElement(By.tagName("h2"));
 
         //c. “E-mail” text
+        WebElement emailLabel = driver.findElement(By.cssSelector("label[for='email']"));
+
         //d. E-mail input box
         //e. “Retrieve password” button
         //f. “Powered by Cybertek School” text
