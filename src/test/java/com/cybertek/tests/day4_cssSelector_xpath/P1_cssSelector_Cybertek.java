@@ -42,6 +42,9 @@ public class P1_cssSelector_Cybertek {
         System.out.println("homeLink.isDisplayed() = " + homeLink.isDisplayed());
 
         System.out.println("forgotPasswordHeader.isDisplayed() = " + forgotPasswordHeader.isDisplayed());
+
+        System.out.println("emailLabel.isDisplayed() = " + emailLabel.isDisplayed());
+
     }
 
 }
