@@ -49,6 +49,8 @@ public class P1_cssSelector_Cybertek {
 
         System.out.println("retrievePasswordButton.isDisplayed() = " + retrievePasswordButton.isDisplayed());
 
+        System.out.println("poweredByText.isDisplayed() = " + poweredByText.isDisplayed());
+
     }
 
 }
