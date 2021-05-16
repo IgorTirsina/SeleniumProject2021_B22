@@ -23,6 +23,8 @@ public class P1_cssSelector_Cybertek {
         WebElement homeLink = driver.findElement(By.cssSelector("a[class='nav-link']"));
 
         //b. “Forgot password” header
+        WebElement forgotPasswordHeader = driver.findElement(By.tagName("h2"));
+
         //c. “E-mail” text
         //d. E-mail input box
         //e. “Retrieve password” button
