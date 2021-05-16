@@ -1,7 +1,9 @@
 package com.cybertek.tests.day4_cssSelector_xpath;
 
 import com.cybertek.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class P1_cssSelector_Cybertek {
 
@@ -17,6 +19,8 @@ public class P1_cssSelector_Cybertek {
 
         //3. Locate all the WebElements on the page using XPATH and/or CSS locator only (total of 6)
         //a. “Home” link
+        WebElement homeLink = driver.findElement(By.cssSelector(""));
+
         //b. “Forgot password” header
         //c. “E-mail” text
         //d. E-mail input box
