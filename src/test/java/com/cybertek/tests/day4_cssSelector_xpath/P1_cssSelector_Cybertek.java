@@ -19,7 +19,8 @@ public class P1_cssSelector_Cybertek {
 
         //3. Locate all the WebElements on the page using XPATH and/or CSS locator only (total of 6)
         //a. “Home” link
-        WebElement homeLink = driver.findElement(By.cssSelector(""));
+        //WebElement homeLink = driver.findElement(By.cssSelector("a.nav-link"));
+        WebElement homeLink = driver.findElement(By.cssSelector("a[class='nav-link']"));
 
         //b. “Forgot password” header
         //c. “E-mail” text
