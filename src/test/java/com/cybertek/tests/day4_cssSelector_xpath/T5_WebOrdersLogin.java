@@ -19,6 +19,15 @@ public class T5_WebOrdersLogin {
 
         // 3- Verify title equals:
         //Expected: Web Orders Login
+        String expectedTitle = "Web Orders Login";
+        String actualTitle = driver.getTitle();
+
+        if (actualTitle.equals(expectedTitle)){
+            System.out.println("Login page title verification PASSED!");
+        }else {
+            System.out.println("Login page title verification FAILED!!!");
+        }
+
         // 4- Enter username: Tester
         // 5- Enter password: test
         // 6- Click “Sign In” button
