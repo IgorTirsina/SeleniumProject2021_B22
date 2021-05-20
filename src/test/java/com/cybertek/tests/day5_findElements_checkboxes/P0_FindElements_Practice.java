@@ -30,9 +30,24 @@ public class P0_FindElements_Practice {
 
         //we are storing all of the links that are returned by findElements method
         List<WebElement> listOfLinks = driver.findElements(By.xpath("//body//a"));
-
-
+        
         //3. Print out the texts of all links
+        for (WebElement each : listOfLinks) {
+
+            System.out.println(each.getText());
+            System.out.println(each.getAttribute("href"));
+
+        }
+
+        //iter + tab ==> shortcut for foreach loop
+        //fori + tab ==> shortcut for regular for loop
+        
         //4. Print out how many total link
+
+        int numberOfLinks = listOfLinks.size();
+
+        System.out.println("numberOfLinks = " + numberOfLinks);
+
+
     }
 }
