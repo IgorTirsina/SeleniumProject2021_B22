@@ -54,6 +54,11 @@ public class P0_Checkbox_Practice {
         }
 
         //7. Confirm checkbox #2 is NOT selected.
+        if (!checkbox2.isSelected()){
+            System.out.println("Checkbox 2 is not selected. Verification PASSED!");
+        }else{
+            System.out.println("Checkbox 2 is selected. Verification FAILED!!!");
+        }
 
     }
 }
