@@ -1,8 +1,34 @@
 package com.cybertek.tests.day6_testng_intro_dropdowns;
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class TestNG_Intro {
+
+
+
+    @Test (priority = 1)
+    public void test1(){
+        System.out.println("Running test 1...");
+
+        String actual = "apple";
+        String expected = "apples";
+
+        Assert.assertEquals(actual,expected);
+
+
+    }
+
+    @Test (priority = 2)
+    public void test2(){
+        System.out.println("Running test 2...");
+        String actual = "apple";
+        String expected = "apples";
+
+        Assert.assertTrue(actual.equals(expected));
+        //Assert.assertFalse(false);
+
+    }
 
     @BeforeClass
     public void setupClass(){
@@ -23,20 +49,6 @@ public class TestNG_Intro {
     public void teardownMethod(){
         System.out.println("---> After method is running...");
     }
-
-    @Test
-    public void test1(){
-        System.out.println("Running test 1...");
-    }
-
-    @Test
-    public void test2(){
-        System.out.println("Running test 2...");
-
-    }
-
-    //BREAK UNTIL 2.15PM CST
-
 
 
 }
