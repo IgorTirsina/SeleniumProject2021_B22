@@ -16,7 +16,7 @@ public class P03_Apple_task {
         //1. Open Chrome browser
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         //2. Go to https://www.apple.com
         driver.get("https://www.apple.com");
@@ -40,7 +40,7 @@ public class P03_Apple_task {
             //System.out.println(headerLinks.get(eachLink).getText());
 
             headerLinks.get(eachLink).click();
-            Thread.sleep(2000);
+            Thread.sleep(3000);
 
             //4. Print out the titles of the each page
             System.out.println("Current title in the page:" + driver.getTitle());
