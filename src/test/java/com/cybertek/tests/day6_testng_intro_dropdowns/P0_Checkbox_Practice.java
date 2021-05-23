@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class P0_Checkbox_Practice {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         //Practice: Cybertek Checkboxes
         WebDriver driver = WebDriverFactory.getDriver("chrome");
@@ -31,7 +31,6 @@ public class P0_Checkbox_Practice {
             System.out.println("Checkbox 1 is selected. Verification FAILED!!!");
         }
 
-
         //3. Confirm checkbox #2 is SELECTED by default.
         if (checkbox2.isSelected()){
             System.out.println("Checkbox 2 is selected. Verification PASSED!");
@@ -40,7 +39,13 @@ public class P0_Checkbox_Practice {
         }
 
         //4. Click checkbox #1 to select it.
+        Thread.sleep(2000);
+        checkbox1.click();
+
         //5. Click checkbox #2 to deselect it.
+        Thread.sleep(2000);
+        checkbox2.click();
+
         //6. Confirm checkbox #1 is SELECTED.
         //7. Confirm checkbox #2 is NOT selected.
 
