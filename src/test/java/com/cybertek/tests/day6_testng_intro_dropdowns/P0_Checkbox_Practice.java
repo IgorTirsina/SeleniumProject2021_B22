@@ -28,12 +28,16 @@ public class P0_Checkbox_Practice {
         if (!checkbox1.isSelected()){
             System.out.println("Checkbox 1 is not selected. Verification PASSED!");
         }else{
-            System.out.println("Checkbox 2 is selected. Verification FAILED!!!");
+            System.out.println("Checkbox 1 is selected. Verification FAILED!!!");
         }
 
 
         //3. Confirm checkbox #2 is SELECTED by default.
-
+        if (checkbox2.isSelected()){
+            System.out.println("Checkbox 2 is selected. Verification PASSED!");
+        }else{
+            System.out.println("Checkbox 2 is NOT selected. Verification FAILED!!!");
+        }
 
         //4. Click checkbox #1 to select it.
         //5. Click checkbox #2 to deselect it.
