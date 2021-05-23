@@ -70,6 +70,7 @@ public class P03_Apple_task {
             System.out.println("--> Current page links with NO TEXT: " + linksWithNoText);
 
             // b. Print out how many link has text TOTAL
+            System.out.println("--> Current page links with text: " + linksWithText);
 
         }
 
