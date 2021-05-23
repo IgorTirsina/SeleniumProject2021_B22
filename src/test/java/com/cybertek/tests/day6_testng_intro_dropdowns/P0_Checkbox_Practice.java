@@ -25,6 +25,13 @@ public class P0_Checkbox_Practice {
         WebElement checkbox2 = driver.findElement(By.xpath("(//input[@type='checkbox'])[2]"));
 
         //2. Confirm checkbox #1 is NOT selected by default
+        if (!checkbox1.isSelected()){
+            System.out.println("Checkbox 1 is not selected. Verification PASSED!");
+        }else{
+            System.out.println("Checkbox 2 is selected. Verification FAILED!!!");
+        }
+
+
         //3. Confirm checkbox #2 is SELECTED by default.
 
 
