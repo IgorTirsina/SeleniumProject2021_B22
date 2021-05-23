@@ -19,7 +19,10 @@ public class P0_Checkbox_Practice {
         //1. Go to http://practice.cybertekschool.com/checkboxes
         driver.get("http://practice.cybertekschool.com/checkboxes");
 
+
         WebElement checkbox1 = driver.findElement(By.xpath("(//input[@type='checkbox'])[1]"));
+
+        WebElement checkbox2 = driver.findElement(By.xpath("(//input[@type='checkbox'])[2]"));
 
         //2. Confirm checkbox #1 is NOT selected by default
         //3. Confirm checkbox #2 is SELECTED by default.
