@@ -49,14 +49,31 @@ public class P03_Apple_task {
             //5. Print out total number of links in each page
             List<WebElement> allLinks = driver.findElements(By.xpath("//body//a"));
 
-            System.out.println("Number of links in current page: " + allLinks.size());
+            System.out.println("Total number of links in current page: " + allLinks.size());
 
+            int linksWithNoText = 0;
+            int linksWithText = 0;
+
+            for (WebElement each : allLinks) {
+
+                if (each.getText().isEmpty()){
+                    linksWithNoText++;
+                }else{
+                    linksWithText++;
+                }
+
+            }
+
+
+            //6. While in each page:
+            // a. Print out how many link is missing text TOTAL
+            System.out.println("--> Current page links with NO TEXT: " + linksWithNoText);
+
+            // b. Print out how many link has text TOTAL
 
         }
 
-        //6. While in each page:
-            // a. Print out how many link is missing text TOTAL
-            // b. Print out how many link has text TOTAL
+
 
     }
 }
