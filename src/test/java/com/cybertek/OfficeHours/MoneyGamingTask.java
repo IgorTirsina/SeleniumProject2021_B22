@@ -69,8 +69,13 @@ public class MoneyGamingTask {
         WebElement submitButton = driver.findElement(By.xpath("//input[@value = 'Join Now!']"));
         submitButton.click();
 
+        // Validate that a validation message with text ‘ This field is required’ appears under the date of
+        //     birth box
 
+        String expectedError = "This field is required";
+        String actualError = driver.findElement(By.xpath("//label[@for='dob']")).getText();
 
+        Assert.assertEquals(actualError,expectedError,"verify DOB error message");
 
 
     }
