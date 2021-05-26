@@ -52,6 +52,26 @@ public class MoneyGamingTask {
 
         Assert.assertEquals(actualTitle,expectedTitle,"verify the title");
 
+        // firstname and lastname box
+        WebElement firstName = driver.findElement(By.xpath("//input[@name='map(firstName)']"));
+        WebElement lastName = driver.findElement(By.xpath("//input[@name='map(lastName)']"));
+
+        firstName.sendKeys("Mike");
+        lastName.sendKeys("Smith");
+
+        // Check the tickbox with text
+
+        WebElement termBox = driver.findElement(By.xpath("//input[@name = 'map(terms)']"));
+        termBox.click();
+
+        // Submit the form by clicking the JOIN NOW button
+
+        WebElement submitButton = driver.findElement(By.xpath("//input[@value = 'Join Now!']"));
+        submitButton.click();
+
+
+
+
 
     }
 }
