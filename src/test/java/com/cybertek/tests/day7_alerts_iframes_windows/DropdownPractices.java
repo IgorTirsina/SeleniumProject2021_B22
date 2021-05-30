@@ -87,11 +87,12 @@ public class DropdownPractices {
         //6. Verify final selected option is California.
         //Use all Select options. (visible text, value, index)
 
-        String expectedOptionText = "California";
+        String expectedOptionText = "California1";
         String actualOptionText = stateDropdown.getFirstSelectedOption().getText();
 
-        Assert.assertEquals(actualOptionText, expectedOptionText);
-
+        Assert.assertEquals(actualOptionText, expectedOptionText
+                , "this message will be printed out only if assertion fails");
+        //Assert.assertTrue(stateDropdown.getFirstSelectedOption().getText().equals("California"));
     }
 
 
