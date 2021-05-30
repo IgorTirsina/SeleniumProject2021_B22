@@ -45,14 +45,24 @@ public class DropdownPractices {
         String actualTextOfCurrentOption = currentlySelectedOption.getText();
         String expectedText = "Please select an option";
 
-        Assert.assertTrue(actualTextOfCurrentOption.equals(expectedText));
-
+        //Assert.assertTrue(actualTextOfCurrentOption.equals(expectedText));
+        Assert.assertEquals(actualTextOfCurrentOption, expectedText);
 
         //Doing everything in one line: get currently selected option, get the text and compare against expected
         //Assert.assertEquals(simpleDropdown.getFirstSelectedOption().getText(), "Please select an option");
 
         //4. Verify “State selection” default selected value is correct
         //Expected: “Select a State”
+
+        Select stateDropdown = new Select(driver.findElement(By.xpath("//select[@id='state']")));
+        //Select stateDropdown = new Select(driver.findElement(By.id("state")));
+
+        String actualStateDropdownText = stateDropdown.getFirstSelectedOption().getText();
+        String expectedStateDropdownText = "Select a State";
+
+        Assert.assertEquals(actualStateDropdownText, expectedStateDropdownText);
+
+
 
     }
 
