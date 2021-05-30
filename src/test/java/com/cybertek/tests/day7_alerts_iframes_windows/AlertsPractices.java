@@ -1,6 +1,7 @@
 package com.cybertek.tests.day7_alerts_iframes_windows;
 
 import com.cybertek.utilities.WebDriverFactory;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,7 +34,11 @@ public class AlertsPractices {
         informationAlertButton.click();
 
         //4. Click to OK button from the alert
-        //5. V erify “Y ou successfuly clicked an alert” text is displayed.
+        //Switching driver's focus to alert, so we can handle it
+        Alert alert = driver.switchTo().alert();
+
+
+        //5. Verify “You successfuly clicked an alert” text is displayed.
 
     }
 
