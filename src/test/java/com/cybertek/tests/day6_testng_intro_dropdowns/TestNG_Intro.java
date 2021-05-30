@@ -12,7 +12,7 @@ public class TestNG_Intro {
         System.out.println("Running test 1...");
 
         String actual = "apple";
-        String expected = "apples";
+        String expected = "apple";
 
         Assert.assertEquals(actual,expected);
 
@@ -23,7 +23,7 @@ public class TestNG_Intro {
     public void test2(){
         System.out.println("Running test 2...");
         String actual = "apple";
-        String expected = "apples";
+        String expected = "apple";
 
         Assert.assertTrue(actual.equals(expected));
         //Assert.assertFalse(false);
@@ -31,6 +31,8 @@ public class TestNG_Intro {
     }
 
     @BeforeClass
+
+
     public void setupClass(){
         System.out.println("-----> Before CLASS is running...");
     }
@@ -46,6 +48,8 @@ public class TestNG_Intro {
     }
 
     @AfterMethod
+
+
     public void teardownMethod(){
         System.out.println("---> After method is running...");
     }
