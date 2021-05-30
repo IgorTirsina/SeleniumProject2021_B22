@@ -31,8 +31,6 @@ public class DropdownPractices {
         //str1 = "something";
     }
 
-
-
     @Test
     public void tc1_simple_dropdown_test(){
         ///str1.substring(1,5);
@@ -65,6 +63,21 @@ public class DropdownPractices {
 
 
     }
+
+    @Test
+    public void tc2_state_dropdown_test(){
+
+        //LOCATING STATE DROPDOWN
+        Select stateDropdown = new Select(driver.findElement(By.xpath("//select[@id='state']")));
+        //3. Select Illinois
+        //4. Select Virginia
+        //5. Select California
+        //6. Verify final selected option is California.
+        //Use all Select options. (visible text, value, index)
+
+
+    }
+
 
 
     @AfterClass
