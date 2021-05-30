@@ -69,9 +69,14 @@ public class DropdownPractices {
 
         //LOCATING STATE DROPDOWN
         Select stateDropdown = new Select(driver.findElement(By.xpath("//select[@id='state']")));
+
         //3. Select Illinois
+        stateDropdown.selectByVisibleText("Illinois");
+
         //4. Select Virginia
+
         //5. Select California
+
         //6. Verify final selected option is California.
         //Use all Select options. (visible text, value, index)
 
