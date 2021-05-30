@@ -81,11 +81,16 @@ public class DropdownPractices {
         //5. Select California
         Thread.sleep(1000);
         stateDropdown.selectByIndex(5);
+        //stateDropdown.selectByVisibleText("California");
 
 
         //6. Verify final selected option is California.
         //Use all Select options. (visible text, value, index)
 
+        String expectedOptionText = "California";
+        String actualOptionText = stateDropdown.getFirstSelectedOption().getText();
+
+        Assert.assertEquals(actualOptionText, expectedOptionText);
 
     }
 
