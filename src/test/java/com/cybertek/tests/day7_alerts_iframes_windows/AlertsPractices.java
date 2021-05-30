@@ -33,9 +33,11 @@ public class AlertsPractices {
         //3. Click to “Click for JS Alert” button
         informationAlertButton.click();
 
-        //4. Click to OK button from the alert
         //Switching driver's focus to alert, so we can handle it
         Alert alert = driver.switchTo().alert();
+
+        //4. Click to OK button from the alert
+        alert.accept();
 
 
         //5. Verify “You successfuly clicked an alert” text is displayed.
