@@ -41,7 +41,10 @@ public class WindowPractice {
         WebElement clickHereLink = driver.findElement(By.linkText("Click Here"));
         clickHereLink.click();
 
-
+        for (String each : driver.getWindowHandles()) {
+            driver.switchTo().window(each);
+            System.out.println("CURRENT TITLE WHILE SWITCHING: " + driver.getTitle());
+        }
 
 
         String actualTitleAfterClick = driver.getTitle();
