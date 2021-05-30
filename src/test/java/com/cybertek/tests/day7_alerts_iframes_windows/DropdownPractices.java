@@ -74,6 +74,7 @@ public class DropdownPractices {
         stateDropdown.selectByVisibleText("Illinois");
 
         //4. Select Virginia
+        stateDropdown.selectByValue("VA");
 
         //5. Select California
 
@@ -86,7 +87,8 @@ public class DropdownPractices {
 
 
     @AfterClass
-    public void teardownClass(){
+    public void teardownClass() throws InterruptedException {
+        Thread.sleep(5000);
         driver.close();
     }
 
