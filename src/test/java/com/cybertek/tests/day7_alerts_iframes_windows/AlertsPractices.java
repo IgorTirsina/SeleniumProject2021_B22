@@ -41,8 +41,10 @@ public class AlertsPractices {
         //4. Click to OK button from the alert
         alert.accept();
 
-
         //5. Verify “You successfuly clicked an alert” text is displayed.
+        WebElement resultText = driver.findElement(By.xpath("//p[@id='result']"));
+
+
 
     }
 
