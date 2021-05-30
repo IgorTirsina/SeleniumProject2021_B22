@@ -26,9 +26,18 @@ public class IframePractice {
     @Test
     public void iframe_test(){
 
+        //#1- changing to iframe by index: we pass index number
+        //driver.switchTo().frame(0);
+
+        //#2- Locate as a Web Element to switch
+        // We find and locate <iframe> web element from the page.
+        WebElement iframe = driver.findElement(By.xpath("//iframe[@class='tox-edit-area__iframe']"));
+
+        //locating web element text
         WebElement yourContentGoesHereText = driver.findElement(By.xpath("//p"));
 
         //4. Assert: “Your content goes here.” Text is displayed.
+
         //5. Assert: “An iFrame containing the TinyMCE WYSIWYG Editor
 
 
