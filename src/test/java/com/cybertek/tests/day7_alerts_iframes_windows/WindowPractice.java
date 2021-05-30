@@ -24,6 +24,9 @@ public class WindowPractice {
     @Test
     public void window_test(){
         //4. Assert: Title is “Practice”
+        String actualTitleBeforeClick = driver.getTitle();
+        String expectedTitleBeforeClick = "Practice";
+
         //5. Click to: “Click Here” text
         //6. Switch to new Window.
         //7. Assert: Title is “New Window”
