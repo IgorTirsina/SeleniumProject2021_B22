@@ -1,7 +1,9 @@
 package com.cybertek.tests.day7_alerts_iframes_windows;
 
 import com.cybertek.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -23,6 +25,15 @@ public class AlertsPractices {
 
     @Test
     public void information_alert_test(){
+
+        //Locating the button for alert to click
+        WebElement informationAlertButton = driver.findElement(By.xpath("//button[.='Click for JS Alert']"));
+
+        //3. Click to “Click for JS Alert” button
+        informationAlertButton.click();
+
+        //4. Click to OK button from the alert
+        //5. V erify “Y ou successfuly clicked an alert” text is displayed.
 
     }
 
