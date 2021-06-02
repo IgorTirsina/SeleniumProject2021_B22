@@ -3,6 +3,8 @@ package com.cybertek.OfficeHours.OH_day02;
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -51,13 +53,31 @@ Scenario: Checking the account activity page features of ZeroBank Application
         //    Then The page should have the title "Zero - Account Activity"
 
         driver.findElement(By.cssSelector("[id*='acco']")).click();
-        String expectedTitle = "Zero - Account Activity1";
+        String expectedTitle = "Zero - Account Activity";
         String actualTitle = driver.getTitle();
 
         Assert.assertEquals(actualTitle,expectedTitle,"verify Title");
 
         List<String> expectedOptions = new ArrayList<>(Arrays.asList("Savings", "Checking", "Savings", "Loan",
                 "Credit Card", "Brokerage"));
+
+        Select accountsDropDown = new Select(driver.findElement(By.cssSelector("[id*='aa']")));
+
+        List<WebElement> actualOptions = accountsDropDown.getOptions();
+
+        List<String> actualOptionsTexts = new ArrayList<>();
+        for (WebElement actualOption : actualOptions) {
+            actualOptionsTexts.add(actualOption.getText());
+
+        }
+
+        System.out.println("expectedOptions = " + expectedOptions);
+        System.out.println("actualOptions = " + actualOptions);
+        System.out.println("actualOptionsTexts = " + actualOptionsTexts);
+
+        Assert.assertEquals(actualOptionsTexts,expectedOptions,"verify Dropdown Options");
+
+
 
     }
 
