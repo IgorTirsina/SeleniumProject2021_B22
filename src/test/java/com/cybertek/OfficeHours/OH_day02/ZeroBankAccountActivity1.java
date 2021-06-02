@@ -78,6 +78,12 @@ Scenario: Checking the account activity page features of ZeroBank Application
         Assert.assertEquals(actualOptionsTexts,expectedOptions,"verify Dropdown Options");
 
 
+        accountsDropDown.selectByVisibleText("Brokerage");
+
+        String expectedText = "No results.";
+        String actualText = driver.findElement(By.cssSelector("[class*='well']")).getText();
+
+        Assert.assertEquals(actualText,expectedText,"verify result text");
 
     }
 
