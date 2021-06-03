@@ -30,7 +30,8 @@ public class MultipleWindowsPractice {
 
         for (String each : driver.getWindowHandles()) {
 
-            System.out.println("Title in current page: " + driver.switchTo().window(each));
+            System.out.println("Title in current page: " + driver.getTitle());
+            driver.switchTo().window(each);
 
         }
 
