@@ -3,6 +3,7 @@ package com.cybertek.tests.day8_windows_javafaker;
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -30,8 +31,13 @@ public class MultipleWindowsPractice {
 
         for (String each : driver.getWindowHandles()) {
 
-            System.out.println("Title in current page: " + driver.getTitle());
             driver.switchTo().window(each);
+            System.out.println("Title in current page: " + driver.getTitle());
+
+            if (driver.getTitle().contains("Etsy")){
+                Assert.assertTrue(driver.getTitle().contains("Etsy"));
+                break;
+            }
 
         }
 
