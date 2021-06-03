@@ -1,6 +1,7 @@
 package com.cybertek.tests.day8_windows_javafaker;
 
 import com.cybertek.utilities.WebDriverFactory;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -23,7 +24,9 @@ public class MultipleWindowsPractice {
 
     @Test
     public void multiple_window_test(){
-
+        ((JavascriptExecutor) driver).executeScript("window.open('http://google.com','_blank');");
+        ((JavascriptExecutor) driver).executeScript("window.open('http://etsy.com','_blank');");
+        ((JavascriptExecutor) driver).executeScript("window.open('http://facebook.com','_blank');");
     }
 
 }
