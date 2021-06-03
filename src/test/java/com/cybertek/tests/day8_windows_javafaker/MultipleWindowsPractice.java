@@ -27,6 +27,15 @@ public class MultipleWindowsPractice {
         ((JavascriptExecutor) driver).executeScript("window.open('http://google.com','_blank');");
         ((JavascriptExecutor) driver).executeScript("window.open('http://etsy.com','_blank');");
         ((JavascriptExecutor) driver).executeScript("window.open('http://facebook.com','_blank');");
+
+        for (String each : driver.getWindowHandles()) {
+
+            System.out.println("Title in current page: " + driver.switchTo().window(each));
+
+        }
+
+
+
     }
 
 }
