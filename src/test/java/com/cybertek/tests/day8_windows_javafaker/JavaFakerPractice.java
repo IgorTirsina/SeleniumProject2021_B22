@@ -9,7 +9,9 @@ public class JavaFakerPractice {
     public void test1(){
         Faker faker = new Faker();
 
+        String fullName = faker.name().fullName();
 
+        System.out.println("fullName = " + fullName);
 
     }
 
