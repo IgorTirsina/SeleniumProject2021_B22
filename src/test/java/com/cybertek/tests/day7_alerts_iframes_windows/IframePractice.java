@@ -41,7 +41,6 @@ public class IframePractice {
         // .switchTo().frame() method directly
         driver.switchTo().frame("mce_0_ifr");
 
-
         //locating web element text
         WebElement yourContentGoesHereText = driver.findElement(By.xpath("//p"));
 

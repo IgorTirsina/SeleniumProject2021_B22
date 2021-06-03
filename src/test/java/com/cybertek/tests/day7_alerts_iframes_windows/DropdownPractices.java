@@ -56,7 +56,7 @@ public class DropdownPractices {
 
         Select stateDropdown = new Select(driver.findElement(By.xpath("//select[@id='state']")));
         //Select stateDropdown = new Select(driver.findElement(By.id("state")));
-
+        
         String actualStateDropdownText = stateDropdown.getFirstSelectedOption().getText();
         String expectedStateDropdownText = "Select a State";
 
