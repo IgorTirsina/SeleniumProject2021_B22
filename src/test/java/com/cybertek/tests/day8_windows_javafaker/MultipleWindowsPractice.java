@@ -1,5 +1,6 @@
 package com.cybertek.tests.day8_windows_javafaker;
 
+import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -24,12 +25,14 @@ public class MultipleWindowsPractice {
     }
 
     @Test
-    public void multiple_window_test() throws InterruptedException {
-        Thread.sleep(1000);
+    public void multiple_window_test() {
+        BrowserUtils.sleep(1);
         ((JavascriptExecutor) driver).executeScript("window.open('http://google.com','_blank');");
-        Thread.sleep(1000);
+
+        BrowserUtils.sleep(1);
         ((JavascriptExecutor) driver).executeScript("window.open('http://etsy.com','_blank');");
-        Thread.sleep(1000);
+
+        BrowserUtils.sleep(1);
         ((JavascriptExecutor) driver).executeScript("window.open('http://facebook.com','_blank');");
 
         for (String each : driver.getWindowHandles()) {
