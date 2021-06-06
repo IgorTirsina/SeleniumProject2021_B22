@@ -44,7 +44,14 @@ public class P1_Library_Login {
         //6. Print out count of all the links on landing page
         List<WebElement> allLinks = driver.findElements(By.xpath("//body//a"));
 
+        System.out.println("allLinks.size() = " + allLinks.size());
+
         //7. Print out each link text on this page
+
+        for (WebElement each : allLinks) {
+            System.out.println(each.getText());
+        }
+
     }
 
 }
