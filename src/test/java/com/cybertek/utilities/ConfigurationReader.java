@@ -1,7 +1,7 @@
 package com.cybertek.utilities;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Properties;
 
 /*
@@ -22,8 +22,10 @@ public class ConfigurationReader {
             //#3- load properties object with the file (configuration.properties)
             properties.load(file);
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        } catch (IOException e) {
+
+            System.out.println("File not found in Configuration properties.");
+
         }
 
     }
