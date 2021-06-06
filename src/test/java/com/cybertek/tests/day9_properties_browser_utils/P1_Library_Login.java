@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class P1_Library_Login {
@@ -19,7 +20,7 @@ public class P1_Library_Login {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        driver.get("http://library2.cybertekschool.com/login.html");
+        driver.get("http://library1.cybertekschool.com/login.html");
 
     }
 
@@ -41,6 +42,8 @@ public class P1_Library_Login {
 
 
         //6. Print out count of all the links on landing page
+        List<WebElement> allLinks = driver.findElements(By.xpath("//body//a"));
+
         //7. Print out each link text on this page
     }
 
