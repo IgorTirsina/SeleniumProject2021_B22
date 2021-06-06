@@ -1,7 +1,9 @@
 package com.cybertek.tests.day9_properties_browser_utils;
 
 import com.cybertek.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -26,8 +28,18 @@ public class P1_Library_Login {
         //Task #1: Library software link verification
 
         //3. Enter username: “”
+        WebElement inputUsername = driver.findElement(By.xpath("//input[@id='inputEmail']"));
+        inputUsername.sendKeys("student11@library");
+
         //4. Enter password: “”
+        WebElement inputPassword = driver.findElement(By.xpath("//input[@id='inputPassword']"));
+        inputPassword.sendKeys("tScBPCUr");
+
         //5. Click to Login button
+        WebElement loginButton = driver.findElement(By.xpath("//button[text()='Sign in']"));
+        loginButton.click();
+
+
         //6. Print out count of all the links on landing page
         //7. Print out each link text on this page
     }
