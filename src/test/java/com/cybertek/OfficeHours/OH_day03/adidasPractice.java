@@ -3,6 +3,7 @@ package com.cybertek.OfficeHours.OH_day03;
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.OfficeHoursUtils;
 import com.cybertek.utilities.WebDriverFactory;
+import com.github.javafaker.Faker;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -35,6 +36,12 @@ public class adidasPractice {
 
         // Remove  Apple monitor 24
         OfficeHoursUtils.productRemover(driver,"Apple monitor 24");
+
+        driver.findElement(By.xpath("//button[.='Place Order']")).click();
+
+        Faker faker = new Faker();
+        driver.findElement(By.id("name")).sendKeys(faker.name().fullName());
+        driver.findElement(By.id("country")).
 
     }
 
