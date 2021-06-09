@@ -11,6 +11,7 @@ public class LearningProperties {
         System.out.println("System.getProperty(\"user.name\") = " + System.getProperty("user.name"));
 
 
+
     }
 
 }
