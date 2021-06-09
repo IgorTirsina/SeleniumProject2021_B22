@@ -7,6 +7,7 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -56,6 +57,9 @@ public class adidasPractice {
         System.out.println("orderID = " + orderID);
         int actualAmmount = Integer.parseInt(confirmationArray[1].split(" ")[1]);
         System.out.println("actualAmmount = " + actualAmmount);
+        int expectedAmount = 1150;
+
+        Assert.assertEquals(actualAmmount,expectedAmount);
     }
 
     @AfterMethod
