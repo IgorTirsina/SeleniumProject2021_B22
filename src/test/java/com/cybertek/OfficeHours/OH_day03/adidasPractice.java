@@ -32,6 +32,10 @@ public class adidasPractice {
         OfficeHoursUtils.productAdder(driver,"Phones","Samsung galaxy s6");
         // Navigate to "Monitors" → "Apple monitor 24" and click on "Add to cart".
         OfficeHoursUtils.productAdder(driver,"Monitors","Apple monitor 24");
+
+        // Remove  Apple monitor 24
+        OfficeHoursUtils.productRemover(driver,"Apple monitor 24");
+
     }
 
     @AfterMethod
