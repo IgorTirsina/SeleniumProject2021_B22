@@ -41,8 +41,21 @@ public class adidasPractice {
 
         Faker faker = new Faker();
         driver.findElement(By.id("name")).sendKeys(faker.name().fullName());
-        driver.findElement(By.id("country")).
+        driver.findElement(By.id("country")).sendKeys(faker.country().name());
+        driver.findElement(By.id("city")).sendKeys(faker.country().capital());
+        driver.findElement(By.id("card")).sendKeys(faker.finance().creditCard());
+        driver.findElement(By.id("month")).sendKeys(String.valueOf(faker.number().numberBetween(1,12)));
+        driver.findElement(By.id("year")).sendKeys(String.valueOf(faker.number().numberBetween(2022,2030)));
+        driver.findElement(By.xpath("//button[.='Purchase']")).click();
+        BrowserUtils.sleep(1);
+        String confirmation = driver.findElement(By.xpath("//p[@class='lead text-muted ']")).getText();
+        System.out.println("confirmation = " + confirmation);
 
+        String[] confirmationArray = confirmation.split("\n");
+        String orderID = confirmationArray[0];
+        System.out.println("orderID = " + orderID);
+        int actualAmmount = Integer.parseInt(confirmationArray[1].split(" ")[1]);
+        System.out.println("actualAmmount = " + actualAmmount);
     }
 
     @AfterMethod
