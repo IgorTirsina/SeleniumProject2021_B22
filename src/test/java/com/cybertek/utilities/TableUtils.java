@@ -35,6 +35,8 @@ public class TableUtils {
             }
         }
 
+        //Assert.fail("this line will fail the code");
+
         Assert.assertTrue(false, "Name does not exist in the list.");
     }
 
