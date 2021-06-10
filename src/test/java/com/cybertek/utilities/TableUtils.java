@@ -21,6 +21,14 @@ public class TableUtils {
         //Locate all the names from table and store them in a List of WebElements
         List<WebElement> allNames = driver.findElements(By.xpath("//table[@id='table1']//tr/td[2]"));
 
+        //to introduce local variable
+        //mac: option+enter
+        //windows : alt+enter
+
+        for (WebElement each : allNames) {
+            System.out.println(each.getText());
+        }
+
     }
 
 
