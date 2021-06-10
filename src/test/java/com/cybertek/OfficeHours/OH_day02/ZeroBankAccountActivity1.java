@@ -85,6 +85,7 @@ Scenario: Checking the account activity page features of ZeroBank Application
 
         Assert.assertEquals(actualText,expectedText,"verify result text");
 
+
     }
 
     @AfterClass
