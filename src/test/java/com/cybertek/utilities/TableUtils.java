@@ -1,5 +1,11 @@
 package com.cybertek.utilities;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
+
 public class TableUtils {
 
     //PRACTICE #4: Method: verifyOrder
@@ -10,7 +16,10 @@ public class TableUtils {
     //given name is in the list or not.
     //• Create a new TestNG test to test if the method is working as expected.
 
-    public static void verifyOrder(){
+    public static void verifyOrder(WebDriver driver, String name){
+
+        //Locate all the names from table and store them in a List of WebElements
+        List<WebElement> allNames = driver.findElements(By.xpath("//table[@id='table1']//tr/td[2]"));
 
     }
 
