@@ -68,4 +68,11 @@ public class Table_Tasks {
 
     }
 
+    @Test
+    public void task5_print_all_names_and_emails(){
+
+        TableUtils.printNamesAndEmails(driver);
+
+    }
+
 }
