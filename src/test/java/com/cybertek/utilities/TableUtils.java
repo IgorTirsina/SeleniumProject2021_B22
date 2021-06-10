@@ -28,12 +28,14 @@ public class TableUtils {
 
         for (WebElement each : allNames) {
             if (each.getText().equals(name)){
+
                 Assert.assertTrue(true);
-            }else{
-                Assert.assertTrue(false);
+                return;
+
             }
         }
 
+        Assert.assertTrue(false, "Name does not exist in the list.");
     }
 
 

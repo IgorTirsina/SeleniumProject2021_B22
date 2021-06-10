@@ -64,7 +64,7 @@ public class Table_Tasks {
     @Test
     public void task4_verify_order_method(){
 
-        TableUtils.verifyOrder(driver, "random");
+        TableUtils.verifyOrder(driver, "Tim");
 
     }
 
