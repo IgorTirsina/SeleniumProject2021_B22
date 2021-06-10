@@ -2,7 +2,9 @@ package com.cybertek.tests.day10_webtable_properties_practices;
 
 import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -40,7 +42,8 @@ public class Table_Tasks {
 
         // 1st way: //table[@id='table1']//td[.='Tim']/../td[4]
         // 2nd way: //table[@id='table1']//td[.='Tim']/following-sibling::td[2]
-        //BREAK UNTIL: 8.08PM CST
+
+        WebElement timsDueAmountCell = driver.findElement(By.xpath("//table[@id='table1']//td[.='Tim']/../td[4]"));
 
 
         //Note: Create locator for Tim that will be dynamic and doesn’t care in which row Tim is.
