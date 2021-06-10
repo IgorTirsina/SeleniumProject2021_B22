@@ -20,7 +20,7 @@ public class ReadingProperties {
         //We are trying to open a file, so we need to pass the path.
 
         FileInputStream file = new FileInputStream("configuration.properties");
-
+        //
         //#3- load the properties object with our file
         properties.load(file);
 
