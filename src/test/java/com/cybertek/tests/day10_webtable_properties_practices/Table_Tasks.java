@@ -15,7 +15,12 @@ public class Table_Tasks {
     @BeforeMethod
     public void setupMethod(){
 
-        driver = WebDriverFactory.getDriver(ConfigurationReader.getProperty(""));
+        String browser = ConfigurationReader.getProperty("browser");
+        //This line returns String : chrome
+
+        String url = ConfigurationReader.getProperty("");
+
+        driver = WebDriverFactory.getDriver(browser);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("");
