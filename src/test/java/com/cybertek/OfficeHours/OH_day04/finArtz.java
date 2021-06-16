@@ -1,4 +1,4 @@
-package com.cybertek.OH_day04;
+package com.cybertek.OfficeHours.OH_day04;
 
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.ConfigurationReader;
