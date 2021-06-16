@@ -42,6 +42,8 @@ public class adidasPractice {
         driver.findElement(By.xpath("//button[.='Place Order']")).click();
 
         Faker faker = new Faker();
+
+
         driver.findElement(By.id("name")).sendKeys(faker.name().fullName());
         driver.findElement(By.id("country")).sendKeys(faker.country().name());
         driver.findElement(By.id("city")).sendKeys(faker.country().capital());
