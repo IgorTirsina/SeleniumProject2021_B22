@@ -21,8 +21,16 @@ public class Driver {
      */
     public static WebDriver getDriver(){
 
+        if (driver == null){
+
+            /*
+            We read our browser type from configuration.properties file using
+            .getProperty method we creating in ConfigurationReader class.
+             */
+            String browserType = ConfigurationReader.getProperty("browser");
 
 
+        }
 
 
     }
