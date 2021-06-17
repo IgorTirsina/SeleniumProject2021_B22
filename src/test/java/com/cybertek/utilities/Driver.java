@@ -52,8 +52,12 @@ public class Driver {
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
             }
-
         }
+
+        /*
+        Same driver instance will be returned every time we call Driver.getDriver(); method
+         */
+        return driver;
 
 
     }
