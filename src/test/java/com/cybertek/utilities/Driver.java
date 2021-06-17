@@ -29,6 +29,10 @@ public class Driver {
              */
             String browserType = ConfigurationReader.getProperty("browser");
 
+            switch (browserType){
+                case "chrome":
+
+            }
 
         }
 
