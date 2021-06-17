@@ -14,29 +14,14 @@ import java.util.concurrent.TimeUnit;
 
 public class Table_Tasks {
 
-    WebDriver driver;
 
-    @BeforeMethod
-    public void setupMethod(){
-
-        String browser = ConfigurationReader.getProperty("browser");
-        //This line returns String : chrome
-
-        String url = ConfigurationReader.getProperty("dataTablesUrl");
-        //This line returns String : http://practice.cybertekschool.com/tables#edit
-
-        driver = WebDriverFactory.getDriver(browser);
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        driver.get(url);
-        // below code is same as above
-        //driver.get(ConfigurationReader.getProperty("dataTablesUrl"));
-
-    }
 
     @Test
     public void task3_return_tims_due_amount(){
-
+        // below code is same as above
+        //driver.get(ConfigurationReader.getProperty("dataTablesUrl"));
+        String url = ConfigurationReader.getProperty("dataTablesUrl");
+        driver.get(url);
         ////table[@id='table1']//td[.='Tim'] --> this locator locates Tim's cell regardless
         // of which row he is in
 
