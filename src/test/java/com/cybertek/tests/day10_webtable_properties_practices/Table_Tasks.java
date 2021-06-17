@@ -1,19 +1,14 @@
 package com.cybertek.tests.day10_webtable_properties_practices;
 
+import com.cybertek.tests.base.TestBase;
 import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.TableUtils;
-import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
-public class Table_Tasks {
-
+public class Table_Tasks extends TestBase {
 
 
     @Test
