@@ -43,6 +43,8 @@ public class Table_Tasks extends TestBase {
 
     @Test
     public void task4_verify_order_method(){
+        String url = ConfigurationReader.getProperty("dataTablesUrl");
+        driver.get(url);
 
         TableUtils.verifyOrder(driver, "Tim");
 
@@ -50,6 +52,8 @@ public class Table_Tasks extends TestBase {
 
     @Test
     public void task5_print_all_names_and_emails(){
+        String url = ConfigurationReader.getProperty("dataTablesUrl");
+        driver.get(url);
 
         TableUtils.printNamesAndEmails(driver);
 
