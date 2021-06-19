@@ -1,5 +1,8 @@
 package com.cybertek.tests.day12_actions_upload_jsexecutor;
 
+import com.cybertek.utilities.Driver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class ActionsPractices {
@@ -9,6 +12,12 @@ public class ActionsPractices {
 
         //TC #15: Hover Test
         //1. Go to http://practice.cybertekschool.com/hovers
+        Driver.getDriver().get("http://practice.cybertekschool.com/hovers");
+
+        //Locating all of the images here:
+        WebElement img1 = Driver.getDriver().findElement(By.xpath("(//img)[1]"));
+
+
         //2. Hover over to first image
         //3. Assert:
         //a. “name: user1” is displayed 4. Hover over to second image
