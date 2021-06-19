@@ -65,4 +65,19 @@ public class ActionsPractices {
 
     }
 
+    @Test
+    public void scrolling_test(){
+
+        // Go to http://practice.cybertekschool.com/
+        Driver.getDriver().get("http://practice.cybertekschool.com/");
+
+        // Scroll down to "Powered By Cybertek School"
+        Actions actions = new Actions(Driver.getDriver());
+
+        //Locate "Powered By Cybertek School"
+        WebElement cybertekSchoolLink = Driver.getDriver().findElement(By.linkText("Cybertek School"));
+
+
+    }
+
 }
