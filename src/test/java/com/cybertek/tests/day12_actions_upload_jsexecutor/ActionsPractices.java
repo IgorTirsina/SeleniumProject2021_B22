@@ -29,6 +29,8 @@ public class ActionsPractices {
         Actions actions = new Actions(Driver.getDriver());
 
         //2. Hover over to first image
+        actions.moveToElement(img1);
+
         //3. Assert:
         //a. “name: user1” is displayed 4. Hover over to second image
         //5. Assert:
