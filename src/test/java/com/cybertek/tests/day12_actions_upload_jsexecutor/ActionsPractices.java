@@ -77,6 +77,9 @@ public class ActionsPractices {
         //Locate "Powered By Cybertek School"
         WebElement cybertekSchoolLink = Driver.getDriver().findElement(By.linkText("Cybertek School"));
 
+        //Scroll using actions object
+        BrowserUtils.sleep(2);
+        actions.moveToElement(cybertekSchoolLink).perform();
 
     }
 
