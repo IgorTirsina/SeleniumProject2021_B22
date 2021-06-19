@@ -52,7 +52,14 @@ public class JSExecutorPractices {
         WebElement homeLink= Driver.getDriver().findElement(By.linkText("Home"));
 
         //use js.executor with different scrolling JavaScript function
+        //scroll down to cybertekSchool Link
+        BrowserUtils.sleep(1);
         js.executeScript("arguments[0].scrollIntoView(true)", cybertekSchoolLink);
+
+        //scroll up to Home link
+        BrowserUtils.sleep(1);
+        js.executeScript("arguments[0].scrollIntoView(true)", homeLink);
+
 
     }
 
