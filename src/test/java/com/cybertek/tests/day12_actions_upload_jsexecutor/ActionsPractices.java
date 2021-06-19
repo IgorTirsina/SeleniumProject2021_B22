@@ -3,6 +3,7 @@ package com.cybertek.tests.day12_actions_upload_jsexecutor;
 import com.cybertek.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class ActionsPractices {
@@ -21,8 +22,11 @@ public class ActionsPractices {
 
         //Locating all the "user" texts
         WebElement user1 = Driver.getDriver().findElement(By.xpath("//h5[.='name: user1']"));
-        WebElement user2 = Driver.getDriver().findElement(By.xpath("//h5[.='name: user1']"));
-        WebElement user3 = Driver.getDriver().findElement(By.xpath("//h5[.='name: user1']"));
+        WebElement user2 = Driver.getDriver().findElement(By.xpath("//h5[.='name: user2']"));
+        WebElement user3 = Driver.getDriver().findElement(By.xpath("//h5[.='name: user3']"));
+
+        //We must create object of Actions class to be able to use methods coming from there
+        Actions actions = new Actions(Driver.getDriver());
 
         //2. Hover over to first image
         //3. Assert:
