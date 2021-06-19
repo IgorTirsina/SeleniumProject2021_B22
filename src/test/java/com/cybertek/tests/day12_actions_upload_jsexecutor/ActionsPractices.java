@@ -86,6 +86,12 @@ public class ActionsPractices {
         BrowserUtils.sleep(2);
         actions.sendKeys(Keys.PAGE_UP).perform();
 
+        BrowserUtils.sleep(2);
+        actions.sendKeys(Keys.PAGE_UP).perform();
+
+        BrowserUtils.sleep(2);
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+
 
 
     }
