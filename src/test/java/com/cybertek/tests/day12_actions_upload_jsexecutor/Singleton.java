@@ -17,6 +17,12 @@ public class Singleton {
     //We allow user to access to 'word' in the way we want them to have
     public static String getWord(){
 
+        if(word==null){
+            System.out.println("First time call. Word object is null." +
+                    "Assigning value to it now");
+            word = "something";
+        }
+
     }
 
 
