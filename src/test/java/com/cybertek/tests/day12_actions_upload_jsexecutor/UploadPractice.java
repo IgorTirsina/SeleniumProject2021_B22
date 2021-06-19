@@ -40,6 +40,9 @@ public class UploadPractice {
 
         Assert.assertTrue(fileUploadedMessage.isDisplayed());
 
+
+        Driver.closeDriver();
+
     }
 
 }
