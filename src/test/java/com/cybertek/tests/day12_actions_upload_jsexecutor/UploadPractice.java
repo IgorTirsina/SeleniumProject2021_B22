@@ -35,6 +35,10 @@ public class UploadPractice {
 
         //4. Assert:
         //-File uploaded text is displayed on the page
+        WebElement fileUploadedMessage = Driver.getDriver().findElement(By.tagName("h3"));
+
+
+
     }
 
 }
