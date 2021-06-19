@@ -4,6 +4,7 @@ import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class UploadPractice {
@@ -37,7 +38,7 @@ public class UploadPractice {
         //-File uploaded text is displayed on the page
         WebElement fileUploadedMessage = Driver.getDriver().findElement(By.tagName("h3"));
 
-
+        Assert.assertTrue(fileUploadedMessage.isDisplayed());
 
     }
 
