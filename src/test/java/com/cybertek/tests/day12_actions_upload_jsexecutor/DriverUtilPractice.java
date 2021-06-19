@@ -33,6 +33,12 @@ public class DriverUtilPractice {
 
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
 
+        //This will terminate the session and assign driver value to null
+        Driver.closeDriver();
+
+        Driver.getDriver().get("https://etsy.com");
+
+        Driver.closeDriver();
 
     }
 
