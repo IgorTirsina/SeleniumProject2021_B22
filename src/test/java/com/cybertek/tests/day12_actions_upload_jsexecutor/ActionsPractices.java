@@ -19,6 +19,8 @@ public class ActionsPractices {
         WebElement img2 = Driver.getDriver().findElement(By.xpath("(//img)[2]"));
         WebElement img3 = Driver.getDriver().findElement(By.xpath("(//img)[3]"));
 
+        //Locating all the "user" texts
+        WebElement user1 = Driver.getDriver().findElement(By.xpath("//h5[.='name: user1']"));
 
         //2. Hover over to first image
         //3. Assert:
