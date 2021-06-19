@@ -47,7 +47,12 @@ public class JSExecutorPractices {
 
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
+        //Locating the web elements so we can use in js.executeScript method
         WebElement cybertekSchoolLink= Driver.getDriver().findElement(By.linkText("Cybertek School"));
+        WebElement homeLink= Driver.getDriver().findElement(By.linkText("Home"));
+
+        //use js.executor with different scrolling JavaScript function
+        js.executeScript("arguments[0].scrollIntoView(true)", cybertekSchoolLink);
 
     }
 
