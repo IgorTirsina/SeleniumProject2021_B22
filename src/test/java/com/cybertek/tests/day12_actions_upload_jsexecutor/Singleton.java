@@ -14,5 +14,12 @@ public class Singleton {
     // we will ensure we create access only through our getter method
     private static String word;
 
+    //We allow user to access to 'word' in the way we want them to have
+    public static String getWord(){
+
+    }
+
+
+
 
 }
