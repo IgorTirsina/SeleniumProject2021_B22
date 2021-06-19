@@ -5,6 +5,7 @@ import com.cybertek.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DriverUtilPractice {
@@ -19,13 +20,19 @@ public class DriverUtilPractice {
         //2- Search for a value
         WebElement searchBox = Driver.getDriver().findElement(By.name("q"));
 
-        String searchValue = "there is no spoon";
+        //String searchValue = "there is no spoon";
+        String searchValue = ConfigurationReader.getProperty("searchValue");
 
         //send the searchValue and press enter
         searchBox.sendKeys(searchValue + Keys.ENTER);
 
 
         //3- Verify value is contained in the title
+        String actualTitle = Driver.getDriver().getTitle();
+        String expectedInTitle = searchValue;
+
+        Assert.assertTrue(actualTitle.contains(expectedInTitle));
+
 
     }
 
