@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
+import java.util.Random;
 
 public class techCrunch {
 // author : (//article[@class='post-block post-block--image post-block--unread'])[1]//a[contains(@aria-label,'Posts by')]
@@ -31,5 +32,24 @@ public class techCrunch {
     Assert.assertTrue(pictureElement.isDisplayed());
 
         }
+
+        //    the browser title is the same with the news title
+        Random random = new Random();
+        int newsNumber = random.nextInt(latestNews.size());
+        latestNews.get(newsNumber).click();
+        BrowserUtils.sleep(2);
+        String expectedTitle = Driver.getDriver().findElement(By.xpath("//h1")).getText();
+        String actualTitle = Driver.getDriver().getTitle();
+        Assert.assertTrue(actualTitle.contains(expectedTitle));
+
+        // the links within the news content
+
+List<WebElement> allTheLinksOfTheNews = Driver.getDriver().findElements(By.xpath("//body//a"));
+Assert.assertTrue(allTheLinksOfTheNews.size()>0);
+        for (WebElement eachLinksOfTheNew : allTheLinksOfTheNews) {
+            System.out.println("eachLinksOfTheNew = " + eachLinksOfTheNew.getAttribute("href"));
+        }
+
+ Driver.closeDriver();
     }
 }
