@@ -18,8 +18,7 @@ public class UploadPractice {
         // windows : shift + right click
         // mac : right click + press and hold options --> copy as path name
 
-        String path = "/Users/cybertekchicago-1/Downloads/lol.jpg";
-
+        String path = "C:/Users/onder/Desktop/message.txt";
         //3. Upload the file.
         WebElement chooseFile = Driver.getDriver().findElement(By.id("file-upload"));
 

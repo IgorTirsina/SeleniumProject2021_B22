@@ -8,8 +8,8 @@ import org.openqa.selenium.WebElement;
 
 public class OfficeHoursUtils {
 
-    static String userName = new Faker().name().username();
-    static String password = userName.substring(1,3)+"123";
+    static String userName = new Faker().name().firstName()+"123";
+    static String password = "oscar123";
     public static WebElement userNameBox (WebDriver driver){
         return driver.findElement(By.name("username"));
     }
@@ -66,8 +66,8 @@ public class OfficeHoursUtils {
 
     public static boolean negativeLoginTest (WebDriver driver, String url){
         driver.get(url);
-        userNameBox(driver).sendKeys(userName.substring(1));
-        passwordBox(driver).sendKeys(password);
+        userNameBox(driver).sendKeys(userName);
+        passwordBox(driver).sendKeys(password.substring(1));
         driver.findElement(By.xpath("//input [@value='Test Login']")).click();
         WebElement failMessage = driver.findElement(By.xpath("//b[.='**Failed Login**']"));
         return failMessage.isDisplayed();
