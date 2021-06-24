@@ -18,12 +18,16 @@ public class PageObjectModelPractices {
         // Meaning we will be able to use the selenium method through the object of the class.
         LibraryLoginPage loginPage = new LibraryLoginPage();
 
-        //2- Enter incorrect username
-
-
+        //2- Enter incorrect email
+        loginPage.inputEmail.sendKeys("wrong@gmail.com");
 
         //3- Enter incorrect password
-        //4- Verify error message is displayed
+        loginPage.inputPassword.sendKeys("wrong password");
+
+        //4- click to sign in button
+        loginPage.signInButton.click();
+
+        //5- Verify error message is displayed
 
 
     }
