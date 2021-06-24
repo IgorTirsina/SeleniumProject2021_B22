@@ -2,6 +2,7 @@ package com.cybertek.tests.day13_actions_pom_design;
 
 import com.cybertek.pages.LibraryLoginPage;
 import com.cybertek.utilities.Driver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class PageObjectModelPractices {
@@ -28,6 +29,7 @@ public class PageObjectModelPractices {
         loginPage.signInButton.click();
 
         //5- Verify error message is displayed
+        Assert.assertTrue(loginPage.incorrectEmailOrPasswordError.isDisplayed());
 
 
     }
