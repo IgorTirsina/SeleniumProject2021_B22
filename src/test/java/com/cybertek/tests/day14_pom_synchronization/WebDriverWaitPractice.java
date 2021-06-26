@@ -37,6 +37,8 @@ public class WebDriverWaitPractice {
     @Test
     public void dynamic_loading_1_test(){
         //1. Go to http://practice.cybertekschool.com/dynamic_loading/1
+        Driver.getDriver().get("http://practice.cybertekschool.com/dynamic_loading/1");
+
         //2. Click to start
         //3. Wait until loading bar disappears
         //4. Assert username inputbox is displayed
