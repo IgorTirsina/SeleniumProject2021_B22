@@ -4,6 +4,7 @@ import com.cybertek.pages.TelerikPage;
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.Driver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ActionsPractices {
@@ -21,10 +22,15 @@ public class ActionsPractices {
         telerikPage.acceptCookiesButton.click();
 
         //2. Drag and drop the small circle to bigger circle.
-
+        actions.dragAndDrop(telerikPage.smallCircle, telerikPage.bigCircle).perform();
 
         //3. Assert:
         //-Text in big circle changed to: “You did great!”
+        String expected = "You did great!";
+        String actual = telerikPage.bigCircle.getText();
+
+        Assert.assertEquals(actual, expected);
+
     }
 
 
