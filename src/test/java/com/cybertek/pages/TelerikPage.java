@@ -17,4 +17,7 @@ public class TelerikPage {
     @FindBy(id = "droptarget")
     public WebElement bigCircle;
 
+    @FindBy(id = "onetrust-accept-btn-handler")
+    public WebElement acceptCookiesButton;
+
 }
