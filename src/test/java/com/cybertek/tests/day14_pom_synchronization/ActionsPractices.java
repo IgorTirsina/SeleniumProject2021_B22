@@ -24,6 +24,9 @@ public class ActionsPractices {
         //2. Drag and drop the small circle to bigger circle.
         actions.dragAndDrop(telerikPage.smallCircle, telerikPage.bigCircle).perform();
 
+        //2nd way of doing the same thing: LONGER WAY
+        actions.moveToElement(telerikPage.smallCircle).clickAndHold(telerikPage.smallCircle)
+                .moveToElement(telerikPage.bigCircle).release().perform();
 
 
         //3. Assert:
