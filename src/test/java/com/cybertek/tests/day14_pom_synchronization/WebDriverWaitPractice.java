@@ -11,6 +11,7 @@ public class WebDriverWaitPractice {
 
     @Test
     public void dynamic_loading_7_test(){
+        DynamicLoad7Page dynamicLoad7Page = new DynamicLoad7Page();
 
         //1. Go to http://practice.cybertekschool.com/dynamic_loading/7
         Driver.getDriver().get("http://practice.cybertekschool.com/dynamic_loading/7");
@@ -21,8 +22,10 @@ public class WebDriverWaitPractice {
         //use the object to wait for the explicit condition
         wait.until(ExpectedConditions.titleIs("Dynamic title"));
 
+        //this will wait until the image is displayed on the page
+        //wait.until(ExpectedConditions.visibilityOf(dynamicLoad7Page.spongeBobImage));
+
         //3. Assert : Message “Done” is displayed.
-        DynamicLoad7Page dynamicLoad7Page = new DynamicLoad7Page();
 
         Assert.assertTrue(dynamicLoad7Page.doneMessage.isDisplayed());
 
