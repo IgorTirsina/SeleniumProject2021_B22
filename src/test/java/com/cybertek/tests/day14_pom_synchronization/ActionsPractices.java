@@ -25,8 +25,8 @@ public class ActionsPractices {
         actions.dragAndDrop(telerikPage.smallCircle, telerikPage.bigCircle).perform();
 
         //2nd way of doing the same thing: LONGER WAY
-        actions.moveToElement(telerikPage.smallCircle).clickAndHold(telerikPage.smallCircle)
-                .moveToElement(telerikPage.bigCircle).release().perform();
+        //actions.moveToElement(telerikPage.smallCircle).clickAndHold(telerikPage.smallCircle)
+        //.moveToElement(telerikPage.bigCircle).release().perform();
 
 
         //3. Assert:
