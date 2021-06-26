@@ -24,6 +24,8 @@ public class ActionsPractices {
         //2. Drag and drop the small circle to bigger circle.
         actions.dragAndDrop(telerikPage.smallCircle, telerikPage.bigCircle).perform();
 
+
+
         //3. Assert:
         //-Text in big circle changed to: “You did great!”
         String expected = "You did great!";
