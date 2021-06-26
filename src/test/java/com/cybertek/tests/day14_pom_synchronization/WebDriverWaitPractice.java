@@ -12,6 +12,5 @@ public class WebDriverWaitPractice {
 //        3. Assert : Message “Done” is displayed.
 //        4. Assert : Image is displayed.
 
-
     }
 }
