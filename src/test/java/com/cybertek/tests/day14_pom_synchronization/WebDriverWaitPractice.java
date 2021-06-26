@@ -59,6 +59,8 @@ public class WebDriverWaitPractice {
         dynamicLoad1Page.inputPassword.sendKeys("incorrectPassword");
 
         //7. Click to Submit button
+        dynamicLoad1Page.submitButton.click();
+
         //8. Assert “Your password is invalid!” text is displayed.
     }
 
