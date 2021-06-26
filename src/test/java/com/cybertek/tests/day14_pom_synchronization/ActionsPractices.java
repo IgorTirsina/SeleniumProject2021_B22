@@ -1,6 +1,7 @@
 package com.cybertek.tests.day14_pom_synchronization;
 
 import com.cybertek.pages.TelerikPage;
+import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.Driver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
@@ -14,6 +15,10 @@ public class ActionsPractices {
 
         TelerikPage telerikPage = new TelerikPage();
         Actions actions = new Actions(Driver.getDriver());
+
+        //Accept cookies by clicking to the button
+        BrowserUtils.sleep(2);
+        telerikPage.acceptCookiesButton.click();
 
         //2. Drag and drop the small circle to bigger circle.
 
