@@ -28,7 +28,6 @@ public class ActionsPractices {
         //actions.moveToElement(telerikPage.smallCircle).clickAndHold(telerikPage.smallCircle)
         //.moveToElement(telerikPage.bigCircle).release().perform();
 
-
         //3. Assert:
         //-Text in big circle changed to: “You did great!”
         String expected = "You did great!";
