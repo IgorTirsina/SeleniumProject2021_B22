@@ -23,4 +23,10 @@ public class DynamicLoad1Page {
     @FindBy(id = "pwd")
     public WebElement inputPassword;
 
+    @FindBy(xpath = "//button[.='Submit']")
+    public WebElement submitButton;
+
+
+
+
 }
