@@ -62,7 +62,7 @@ public class amazonTestWithPOM {
 
        // reduce to 1 irem
        selectQuantity.selectByVisibleText("1");
-
+        BrowserUtils.sleep(2);
        Assert.assertTrue(amazon.subTotalText.getText().contains("1 item"));
         double priceForOne = Double.parseDouble(amazon.subTotalAmount.getText().substring(2));
        Assert.assertTrue(priceForTwo/priceForOne==2);
