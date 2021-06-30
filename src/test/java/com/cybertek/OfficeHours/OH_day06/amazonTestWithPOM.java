@@ -4,7 +4,12 @@ import com.cybertek.pages.amazonPage;
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.Driver;
+import com.cybertek.utilities.OfficeHoursUtils;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -28,6 +33,20 @@ public class amazonTestWithPOM {
            amazon.Tab(Text).click();
 
        }
+       // search for hats for men
+       amazon.searchBox.sendKeys(ConfigurationReader.getProperty("searchAmazon")+ Keys.ENTER);
+
+       WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
+       wait.until(ExpectedConditions.elementToBeClickable(amazon.firstHat));
+
+       amazon.firstHat.click();
+       // get the single price for the hat
+       String priceText = amazon.price.getText();
+       double singlePriceforHat = OfficeHoursUtils.priceConverter(priceText);
+
+       Select selectQuantity = new Select(amazon.quantityDropDown);
+       selectQuantity.selectByVisibleText("2");
+
 
 
 

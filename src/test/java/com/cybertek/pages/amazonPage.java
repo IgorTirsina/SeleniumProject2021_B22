@@ -23,5 +23,22 @@ public class amazonPage {
         return Driver.getDriver().findElement(By.xpath(locator));
     }
 
+    @FindBy(id = "twotabsearchtextbox")
+    public WebElement searchBox;
+
+    @FindBy(xpath = "//span[@cel_widget_id='MAIN-SEARCH_RESULTS-1']//a[contains(@class,'a-text-normal')]")
+    public WebElement firstHat;
+
+    @FindBy(id = "price_inside_buybox")
+    public WebElement price;
+
+    @FindBy (xpath = "//select[@name='quantity']")
+    public WebElement quantityDropDown;
+
+
+
+
+
+
 
 }
