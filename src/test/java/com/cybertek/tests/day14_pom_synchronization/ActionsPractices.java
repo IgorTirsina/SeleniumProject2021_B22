@@ -3,6 +3,7 @@ package com.cybertek.tests.day14_pom_synchronization;
 import com.cybertek.pages.TelerikPage;
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.Driver;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -20,6 +21,9 @@ public class ActionsPractices {
         //Accept cookies by clicking to the button
         BrowserUtils.sleep(2);
         telerikPage.acceptCookiesButton.click();
+        BrowserUtils.sleep(2);
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("window.scrollBy(0, 350)");
 
         //2. Drag and drop the small circle to bigger circle.
         actions.dragAndDrop(telerikPage.smallCircle, telerikPage.bigCircle).perform();
@@ -32,7 +36,7 @@ public class ActionsPractices {
         //-Text in big circle changed to: “You did great!”
         String expected = "You did great!";
         String actual = telerikPage.bigCircle.getText();
-
+        BrowserUtils.sleep(2);
         Assert.assertEquals(actual, expected);
 
     }
