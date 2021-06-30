@@ -53,13 +53,19 @@ public class amazonTestWithPOM {
 
        // go to cart
        amazon.cart.click();
-
+        // assert that there are 2 items
        Assert.assertTrue(amazon.subTotalText.getText().contains("2 items"));
-
+        // the price from the cart
        double priceForTwo = Double.parseDouble(amazon.subTotalAmount.getText().substring(2));
-
+        // asserting the cart price for 2 items are same as double of single price
        Assert.assertTrue(2*singlePriceforHat==priceForTwo);
 
+       // reduce to 1 irem
+       selectQuantity.selectByVisibleText("1");
+
+       Assert.assertTrue(amazon.subTotalText.getText().contains("1 item"));
+        double priceForOne = Double.parseDouble(amazon.subTotalAmount.getText().substring(2));
+       Assert.assertTrue(priceForTwo/priceForOne==2);
 
 
 
