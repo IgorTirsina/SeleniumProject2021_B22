@@ -35,6 +35,18 @@ public class amazonPage {
     @FindBy (xpath = "//select[@name='quantity']")
     public WebElement quantityDropDown;
 
+    @FindBy(css = "#add-to-cart-button")
+    public WebElement addToCart;
+
+    @FindBy(css = "#nav-cart-count")
+    public WebElement cart;
+
+    @FindBy(css = "#sc-subtotal-label-activecart")
+    public WebElement subTotalText;
+
+    @FindBy(css = "#sc-subtotal-amount-activecart")
+    public WebElement subTotalAmount;
+
 
 
 
